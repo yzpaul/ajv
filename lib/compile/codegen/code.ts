@@ -146,7 +146,7 @@ export function stringify(x: unknown): Code {
 }
 
 export function safeStringify(x: unknown): string {
-  return JSON.stringify(x)
+  return x==undefined?undefined:JSON.stringify(x)
     .replace(/\u2028/g, "\\u2028")
     .replace(/\u2029/g, "\\u2029")
 }
